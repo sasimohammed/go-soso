@@ -1,0 +1,178 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900&display=swap" rel="stylesheet">
+  <style>
+    /* General styles */
+    .main {
+      width: 100vw;
+      height: 100vh;
+      background-color: #F3EAE3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      width: 30%;
+      height: 60%;
+      background-color: white;
+      display: flex;
+      border-radius: 20px;
+      overflow: hidden; /* Ensure content doesn't overflow */
+    }
+
+    .card img {
+      width: 50%;
+      height: 100%;
+      border-radius: 20px 0 0 20px;
+      object-fit: cover; /* Ensure the image covers the area */
+    }
+
+    .text {
+      width: 50%;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .text h1 {
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+      font-size: 35px;
+    }
+
+    .text p {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    .name {
+      font-family: "Dancing Script", cursive;
+      font-size: 20px;
+    }
+
+    .price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 40px;
+    }
+
+    .price h1 {
+      color: #3D8168;
+    }
+
+    .price span {
+      text-decoration: line-through;
+      color: #999;
+    }
+
+    button {
+      background-color: #3D8168;
+      padding: 15px 17px;
+      margin-top: -5px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    button:hover {
+      background-color: #0B3E16;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 700px) {
+      .card {
+        width: 60%; /* Adjust width to fit smaller screens */
+        height: 100%; /* Allow height to adjust based on content */
+        flex-direction: column; /* Stack image and text vertically */
+      }
+
+      .card img {
+        width: 100%;
+        height: 50%; /* Adjust height to maintain aspect ratio */
+        border-radius: 20px 20px 0 0;
+      }
+
+      .text {
+        width: 100%;
+        height:50%;
+        padding: 20px;
+        text-align: left; /* Center text for better appearance */
+      }
+      .text p{
+        width: 83%;
+      }
+      .name  {
+        font-size: 14px;
+
+      }
+      .text h1 {
+        width:100%;
+        font-size: 30px; /* Adjust font size for mobile */
+      }
+
+      .price {
+        flex-direction: row;
+        align-items: center;
+     justify-content: left;
+        margin:0 0;
+        gap:150px;
+        padding-right: 700px;
+      }
+      .price span{
+        font-size: 14px;
+      }
+      button{
+        width:90%;
+       margin-left:2px;
+
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+<div class="main">
+  <div class="card">
+    <img src="images/1.jpg" alt="Perfume Image">
+    <div class="text">
+      <span class="name">PERFUME</span>
+      <h1>Gabrielle Essence Eau De Parfum</h1>
+      <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+      <div class="price">
+        <h1>$149.99</h1>
+        <span>$170.99</span>
+      </div>
+      <button><i class="fa-solid fa-cart-shopping"></i><span> </span> Add to cart</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+
+</html>
