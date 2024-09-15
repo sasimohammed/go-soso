@@ -1,3 +1,7 @@
+![desktop-preview](https://github.com/user-attachments/assets/59ed2a35-b9e7-4709-bef4-a5163f5c63b7)
+
+
+
 Product Preview Card Component
 Welcome to the Product Preview Card Component challenge! The goal of this project is to build a responsive product preview card component that replicates the design as closely as possible. You can use any tools or frameworks you're comfortable with to complete the challenge.
 
