@@ -5,193 +5,369 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
-  <link rel="stylesheet" href="css/style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900&display=swap" rel="stylesheet">
-  <style>
-    /* General styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-
-    }
-    .main {
-      width: 100vw;
-      height: 100vh;
-      background-color: #F3EAE3;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .card {
-      width: 35%;
-      height: 60%;
-      background-color: white;
-      display: flex;
-      border-radius: 20px;
-      overflow: hidden; /* Ensure content doesn't overflow */
-    }
-
-    .card img {
-      width: 50%;
-      height: 100%;
-      border-radius: 20px 0 0 20px;
-      object-fit: cover; /* Ensure the image covers the area */
-    }
-
-    .text {
-      width: 50%;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .text h1 {
-      width:90%;
-      font-family: "Fraunces", serif;
-      font-weight: 700;
-      font-size: 27px;
-      margin:15px 0;
-    }
-
-    .text p {
-      font-family: "Montserrat", sans-serif;
-      font-size: 12px;
-     margin:0;
-    }
-
-    .name {
-      font-family: "Dancing Script", cursive;
-      font-size: 15px;
-      margin-top: 20px;
-
-
-    }
-
-    .price {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-right: 40px;
-      gap:15px;
-    }
-
-    .price h1 {
-      color: #3D8168;
-
-    }
-
-    .price span {
-      text-decoration: line-through;
-      color: #999;
-
-    }
-
-    button {
-      width:90%;
-      background-color: #3D8168;
-  margin-bottom:30px;
-      padding:10px 20px;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    button:hover {
-      background-color: #0B3E16;
-    }
-
-    /* Mobile styles */
-    @media (max-width: 700px) {
-      .card {
-        width: 60%; /* Adjust width to fit smaller screens */
-        height: 100%; /* Allow height to adjust based on content */
-        flex-direction: column; /* Stack image and text vertically */
-      }
-
-      .card img {
-        width: 100%;
-        height: 45%; /* Adjust height to maintain aspect ratio */
-        border-radius: 20px 20px 0 0;
-      }
-
-      .text {
-        width: 100%;
-        height:50%;
-        padding: 20px;
-        text-align: left; /* Center text for better appearance */
-      }
-      .text p{
-        width: 83%;
-      }
-      .name  {
-        font-size: 14px;
-        margin-top: 20px;
-
-      }
-      .text h1 {
-        width:100%;
-        font-size: 30px; /* Adjust font size for mobile */
-      }
-
-      .price {
-        flex-direction: row;
-        align-items: center;
-        justify-content: left;
-        margin:0 0;
-        gap:150px;
-        padding-right: 700px;
-      }
-      .price span{
-        font-size: 14px;
-      }
-      button{
-        width:90%;
-        margin:10px auto;
-
-
-      }
-    }
-
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  #navbar {
+    background-color: white;
+    border: none;
+    box-shadow: none;
+
+  }
+
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #navbar{
+    border: none;
+    box-shadow: none;
+background-color:white;
+  }
+
+.container-fluid .navbar-brand {
+font-weight: 700;
+  font-size: 30px;
+  padding:  0 30px;
+}
+ #features{
+   padding: 0 40px 0 10px;
+   margin-top: 10px;
+   color:black;
+ }
+  #drop {
+    width: 100px; /* Reduce the width */
+    border-radius: 20px; /* Remove border radius */
+    box-shadow: 1px 0 10px 0px darkgray; /* Remove the shadow */
+    height: auto;
+    border: none; /* Remove the border */
+    background-color: white;
+  }
+
+  #drop li {
+    display: flex;
+    align-items: center;
+  }
+  #drop li i {
+    margin-left: 10px;
+  }
+  .fa-tasks{
+    color:#7B76CD;
+  }
+  .fa-calendar-alt{
+    color:#5DADCD;
+  }
+  .fa-bell{
+    color:#E3D167;
+  }
+  .fa-project-diagram{
+    color:#A82ED4;
+  }
+  #company{
+    padding: 0 40px 0 10px;
+    margin-top: 10px;
+    color:black;
+    background-color:white;
+  }
+  #careers{
+    padding: 0 40px 0 10px;
+    margin-top: 2px;
+    background-color:white;
+  }
+  #careers:hover{
+    color:black;
+  }
+  #about{
+    padding: 0 40px 0 10px;
+    margin-top: 2px;
+    background-color:white;
+  }
+  form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+  }
+  form #login{
+    outline: none;
+    border: none;
+    color:dimgray;
+  } form #login:hover{
+    background-color: white;
+    color:black;
+
+      }
+    #reg{
+      outline: none;
+      color:dimgray;
+      border:2px solid dimgray;
+      border-radius: 15px;
+    }
+  form #reg:hover{
+    background-color: white;
+    color:black;
+    border:2px solid black;
+  }
+  #btns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #login, #reg {
+    width: 80%; /* Optional: Make buttons full width */
+  }
+  #btn2{
+    margin-left: 10px;
+   padding:5px 0;
+  }
+  #btn3{
+    margin-left: 10px;
+    padding:5px 0;
+    margin-top: -10px;
+  }
+  /* Container for image and text */
+  /* Container for image and text */
+  #img {
+    width: 100vw; /* Full viewport width */
+    height: 87vh; /* Full viewport height */
+    display: flex; /* Flexbox layout to position items */
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space between text and image */
+    position: relative; /* Positioned relative to the page */
+  }
+
+  /* Text container */
+  #text {
+    width: 40vw; /* Text container width */
+    margin-left: 130px; /* Space from the left */
+    margin-top: 150px; /* Adjust vertical spacing */
+    color: dimgray; /* Text color */
+  }
+
+  /* h1 styling */
+  #text h1 {
+    font-size: 6vw; /* Responsive font size */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 20px; /* Space below heading */
+    color:black;
+  }
+
+  /* p styling */
+  #text p {
+    font-size: 1.1vw; /* Responsive font size for the paragraph */
+    color: dimgray; /* Same text color */
+    margin-top: 0; /* Remove extra margin */
+  }
+
+  /* Image styling */
+  #img img {
+    width: 40vw; /* Image takes 50% of the viewport width */
+    height: 97%; /* Adjust height to be contained */
+    object-fit: contain; /* Maintain aspect ratio without stretching */
+    margin-top: 150px; /* Add spacing on top */
+  }
+  .learn {
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    width:150px;
+    height: 50px;
+    margin-top: 10px;
+  }
+  .learn:hover{
+    background-color: white;
+color:black;
+  }
+  @media (max-width: 768px) {
+    #img {
+      flex-direction: column; /* Stack items vertically */
+      height: auto; /* Adjust height */
+    }
+
+    #img img {
+      width: 100%; /* Full width */
+      height: auto; /* Auto height */
+      margin-top: 0; /* Remove top margin */
+    }
+
+    #text {
+      width: 100%; /* Full width */
+      margin-left: 0; /* Remove left margin */
+      margin-top: 20px; /* Adjust top margin */
+      text-align: center; /* Center text */
+    }
+
+    #text h1 {
+      font-size: 8vw; /* Adjust font size */
+    }
+    #text p {
+      font-size: 4vw; /* Adjust font size */
+    }
+
+    .learn {
+      margin: 20px auto; /* Center button */
+    }
+  }
+  @media (max-width: 768px) {
+    #img {
+      width: 95%; /* Adjust width to fit smaller screens */
+      height: 100%; /* Allow height to adjust based on content */
+      flex-direction: column; /* Stack image and text vertically */
+    }
+
+    #img img {
+      width: 100%; /* Full width */
+      height: auto; /* Auto height */
+      margin-top: 0; /* Remove top margin */
+    }
+
+    #text {
+      width: 90%; /* Full width */
+      margin-left: 0; /* Remove left margin */
+      margin-top: 20px; /* Adjust top margin */
+      text-align: center; /* Center text */
+    }
+
+    #text h1 {
+      font-size: 6vw; /* Adjust font size */
+    }
+
+    #text p {
+      font-size: 3vw; /* Adjust font size */
+    }
+
+    .learn {
+      margin: 20px auto; /* Center button */
+    }
+  }
+
+
+</style>
 <body>
-<div class="main">
-  <div class="card">
-    <img src="images/1.jpg" alt="Perfume Image">
-    <div class="text">
-      <span class="name">PERFUME</span>
-      <h1>Gabrielle Essence Eau De Parfum</h1>
-      <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-      <div class="price">
-        <h1>$149.99</h1>
-        <span>$170.99</span>
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" >
+  <div class="container-fluid" id="navbar" >
+    <a class="navbar-brand" href="#">Snap</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-lg-flex" id="navbarNav" id="navbar" >
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0"   >
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"  id="features">
+            Features
+          </a>
+          <ul class="dropdown-menu" id="drop"  >
+            <li><i class="fas fa-tasks"></i><a class="dropdown-item" href="#">To do list</a></li>
+            <li><i class="fas fa-calendar-alt"></i><a class="dropdown-item" href="#">Calender</a></li>
+            <li><i class="fas fa-bell"></i><a class="dropdown-item" href="#">Reminders</a></li>
+            <li><i class="fas fa-project-diagram"></i><a class="dropdown-item" href="#">Planning</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"  id="company">
+          Company
+          </a>
+          <ul class="dropdown-menu" id="drop">
+            <li><a class="dropdown-item" href="#">History</a></li>
+            <li><a class="dropdown-item" href="#">Our Team</a></li>
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item" id="careers">
+          <a class="nav-link" href="#">Careers</a>
+        </li>
+
+        <li class="nav-item" id="about">
+          <a class="nav-link active" aria-current="page" href="#">About</a>
+        </li>
+      </ul>
+
+      <form class="d-flex" role="search">
+        <button class="btn btn-outline-success" type="submit" id="login">Login</button>
+        <button class="btn btn-outline-success" type="submit" id="reg">Register</button>
+      </form>
+    </div>
+    <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <button><i class="fa-solid fa-cart-shopping"></i><span> </span> Add to cart</button>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="features">
+           Features
+            </a>
+            <ul class="dropdown-menu" id="drop" id="c">
+              <li><i class="fas fa-tasks"></i><a class="dropdown-item" href="#">To do list</a></li>
+              <li><i class="fas fa-calendar-alt"></i><a class="dropdown-item" href="#">Calender</a></li>
+              <li><i class="fas fa-bell"></i><a class="dropdown-item" href="#">Reminders</a></li>
+              <li><i class="fas fa-project-diagram"></i><a class="dropdown-item" href="#">Planning</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="company">
+             Company
+            </a>
+            <ul class="dropdown-menu" id="drop"  id="c">
+              <li><a class="dropdown-item" href="#">History</a></li>
+              <li><a class="dropdown-item" href="#">Our Team</a></li>
+              <li><a class="dropdown-item" href="#">Blog</a></li>>
+            </ul>
+          </li>
+          <li class="nav-item" id="btn2">
+            <a class="nav-link" href="#">Careers</a>
+          </li>
+          <li class="nav-item" id="btn3">
+            <a class="nav-link active" aria-current="page" href="#">About</a>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search" id="btns">
+          <button class="btn btn-outline-success" type="submit" id="login">Login</button>
+          <button class="btn btn-outline-success" type="submit"  id="reg">Register</button>
+        </form>
+      </div>
     </div>
   </div>
-</div>
+</nav>
+<section class="body">
+  <div id="img" class="body" >
+    <div id="text">
+      <h1 >Make <br><span>Remote Work</span> </h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galle</p>
+      <button class="learn">learn more</button>
+
+    </div>
+    <img   src="img/1.png" >
+  </div>
+</section>
 
 <script src="js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
-
-
